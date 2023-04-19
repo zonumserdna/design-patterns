@@ -1,5 +1,4 @@
-/**
- * Interface segregation principle
+/** Interface segregation principle (ISP)
  * 
  * Clients should not be forced to depend on interfaces that they don't use
  * Code should not be forced to depend on methods it does not use

@@ -1,5 +1,4 @@
-/**
- * Open closed principle
+/** Open closed principle (OCP)
  * 
  * Essentially the open closed principle states that classes are open for extension but
  * closed for modification. The whole idea of this principle is once a class is defined,

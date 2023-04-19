@@ -1,5 +1,4 @@
-/**
- * Liskov Substitution principle
+/** Liskov Substitution principle (LSP)
  * 
  * Barbara Liskov
  * 

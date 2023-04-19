@@ -1,5 +1,4 @@
-/**
- * Single responsibility principle
+/** Single responsibility principle (SRP)
  * 
  * It tells you that a class should only have a single primary responsibility
  * and as a consequence, it should only have one reason to change. That reason
