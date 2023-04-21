@@ -29,6 +29,12 @@
  * https://javascript.plainenglish.io/how-to-start-a-blank-typescript-project-1d260f7e2aa8
  */
 
+/** Summary
+ * * Clients should not be forced to depend on interfaces that they don't use
+ * * Segregate or split up interfaces into different parts
+ * * Principle of least surprise
+ */
+
 
 interface Doc
 {
@@ -116,5 +122,5 @@ export class Photocopier implements Printer, Scanner
 }
 
 let printer = new OldFashionedPrinter();
-printer.fax(new Doc()); // nothing happens
-// printer.scan(new Doc()); // error thrown
+// printer.fax(new Doc()); // nothing happens
+printer.scan(new Doc()); // error thrown

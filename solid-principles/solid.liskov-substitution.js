@@ -81,6 +81,11 @@ sq1.width = 10
 console.log(sq1.toString())
  */
 
+/** Summary
+ * * Superclass objects should be replaceable with its subclasses objects without breaking the application
+ * * You can have functions in base class but them could fail completely with a derived class
+ * * Sometimes you can introduce a derived class which breaks existing functionality
+ */
 class Rectangle
 {
   constructor(width, height)

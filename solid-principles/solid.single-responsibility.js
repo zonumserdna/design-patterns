@@ -46,6 +46,13 @@
  * 
  */
 
+/** Summary
+ * * A class should only have a single primary responsibility
+ * * It should only have one reason to change related to its responsibility
+ * * Anti pattern: God Object
+ * * Many objects sharing a functionality
+ * * Separation of concerns
+ */
 const fs = require('fs');
 
 class Journal

@@ -52,6 +52,11 @@
  * If we need filter products using more than one criteria we build combinators like AndSpecification
  */
 
+/** Summary 
+ * * States that classes are open for extension but closed for modification
+ * * A tested production class should not be modified anymore
+ * * State space explosion
+*/
 const Color = Object.freeze({
   red: 'red',
   green: 'green',
@@ -100,13 +105,13 @@ let house = new Product('House', Color.blue, Size.large);
 
 let products = [apple, tree, house];
 
-// let pf = new ProductFilter();
-// console.log(`Green products (old):`);
-// for (let p of pf.filterByColor(products, Color.green))
-//   console.log(` * ${p.name} is green`);
+let pf = new ProductFilter();
+console.log(`Green products (old):`);
+for (let p of pf.filterByColor(products, Color.green))
+  console.log(` * ${p.name} is green`);
 
 // ↑↑↑ BEFORE
-
+/*
 // ↓↓↓ AFTER
 
 // general interface for a specification
@@ -179,3 +184,4 @@ let spec = new AndSpecification(
 );
 for (let p of bf.filter(products, spec))
   console.log(` * ${p.name} is large and green`);
+*/

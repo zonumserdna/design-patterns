@@ -53,11 +53,11 @@
  * Then we implemented the findAllChildrenOf
  */
 
-// let Relationship = Object.freeze({
-//   parent: 0,
-//   child: 1,
-//   sibling: 2
-// });
+/** Summary
+ * * High level modules (such as Research) should not directly depend on low level modules
+ * * Abstractions: either abstract classes or interfaces else
+ * * If the storage structure is replaced then high level modules should not change
+ */
 
 enum ERelationship {
   parent = 'parent',
@@ -83,7 +83,7 @@ interface RelationshipBrowser
 class Relationships implements RelationshipBrowser
 {
   // should be private
-  public data: Array<any>
+  private data: Array<any>
   constructor()
   {
     this.data = [];
@@ -116,7 +116,7 @@ class Relationships implements RelationshipBrowser
 
 export class Research
 {
-  // /*
+  /*
   constructor(relationships: Relationships)
   {
     // problem: direct dependence ↓↓↓↓ on storage mechanic
@@ -129,8 +129,8 @@ export class Research
       console.log(`John has a child named ${rel.to.name}`);
     }
   }
-  // */
-  /*
+  */
+  // /*
   constructor(browser: RelationshipBrowser)
   {
     for (let p of browser.findAllChildrenOf('John'))
@@ -138,7 +138,7 @@ export class Research
       console.log(`John has a child named ${p.name}`);
     }
   }
-  */
+  // */
 }
 
 let dad = new Person('John');
