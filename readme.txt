@@ -59,3 +59,35 @@
     
         - High level modules should not depend upon low-level modules; use abstractions
         - Have everything done through abstractions
+
+- Gamma categorization
+  Name of categories of Design patterns that
+
+  Creational patterns
+
+  - Deal with creation or construction of objects
+  - Create an object is not quite simple as invoking its constructor, but things are quite often more complicated
+  - Explicit (constructor) vs implicit (DI, reflection etc.)
+  - Wholesale (single statement) vs piecewise (step-by-step)
+    - different processes to initialize the object before using it
+    - wholesale: a single statement like a single constructor call is actually sufficient to initialize the object
+    - piecewise: initialization is a bit more complicated process, That's when you need to have several statements
+      or several steps that needs to be taken before an object is actually initialized and ready to use
+  
+  Structural patterns
+
+  - Mainly concerned with the structure of the classes that are involved, it's concerned with the class members
+    it's concerned with things like the class adhering to some interface or other.
+  - Here are for example many patterns which are wrappers which mimic the underlying interface
+  - Structural design patterns is generally put extra weight on the importance of good API design
+  - Some of the patterns are actually all about the idea of replicating the interface as much as possible
+  - Stress the importance of Good API Design that makes objects usable and makes APIs usable for others
+
+  Behavioral patterns
+
+  - Unlike the creational and structural patterns, behavioral patterns don't  really follow any central theme
+    They are all doing their own thing. There is some overlap here. For example the strategy and template method,
+    they are kind of doing the same thing but they're doing it using a completely different object oriented mechanism.
+    There is this kind of overlap but most of the behavioral design patterns are unique in their approach, meaning that
+    they solve a particular problem in a particular way with a particular set of concerns and some are going to cover all
+    of them as well
