@@ -1,0 +1,19 @@
+Motivation
+    - Some objects are simple to create and can be created in a single initializer call
+    - Other objects require a lot of ceremony to create which means that you build up the object
+      in stages and it takes a lot of time and you might be tempted to create a large initializer
+    - Having an object with 10 different initializer arguments is not productive
+    - Instead we opt for piecewise construction: what happens is you call different methods of a
+      special component called builder
+    - Builder provides an API for constructing an object step-by-step
+
+Builder
+    - When piecewise object construction is complicated, provide an API for doing it succinctly
+    - Something that helps to build a particular object
+
+Summary
+  - A builder is a separate component for building an object
+  - Can either give builder an initializer or return it via a static function
+  - To make builder fluent, return self
+  - Different Facets of an object can be built with different builders working in tandem via a
+    base class
