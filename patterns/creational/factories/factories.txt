@@ -1,0 +1,21 @@
+Motivation
+    - Sometimes object creation becomes too convoluted, sometimes the initializer gets
+      longer and longer, more sophisticated and we may want to somehow move this logic somewhere
+    - Initializer is not descriptive
+        - Name is alway __init__, it cannot be renamed
+        - Cannot overload the initializer with same sets of arguments with different names
+        - Can turn into "optional parameter hell", more and more arguments, some of them may be
+          optional, some of them can have default values, and we may want to somehow organize this
+    - Wholesale object creation (non-piecewise, unlike Builder) can be outsourced
+        - First of all we can create a separate method (Factory method), typically a static method
+        - Then we can get this whole idea and move it into separate class (Factory)
+        - Can create a hierarchy of factories with Abstract Factory
+
+Factory
+  A component responsible solely for the wholesale (not piecewise) creation of objects
+
+Summary
+  - A factory method is a static method that creates objects
+  - A factory is any entity that can take care of object creation
+  - A factory can be external or reside inside the object as an inner class
+  - Hierarchies of factories can be used to create related objects
