@@ -1,0 +1,23 @@
+Motivation
+    - Complicated objects (cars, iphone, etc) aren't typically design from scratch
+        - They reiterate existing designs, find out what is already done and improve the design from there
+    - Essentially the idea is that we start from an existing (partially or fully constructed) design, it is the prototype
+    - We make a copy (clone) the prototype and customize it
+        - Requires deep copy
+    -  We make the cloning convenient (e.g., via a Factory), we can have oyr predefined designs and then we ask the factory to
+       customize this design giving us essentially a custom item
+
+Prototype
+    Is a partially or fully initialized object that you copy (clone) and make use of it.
+
+Summary
+    - To implement a prototype, partially construct and store it somewhere
+    - Deep copy the prototype
+    - Customize the resulting instance
+    - A factory provides a convenient API for using prototypes
+
+Some notes
+    https://www.youtube.com/watch?v=JHSxkJuLhKw
+    - Useful when we need to create objects based on existent ones or we must create big objects
+    - An object which support cloning is called a prototype
+    - Example: DB Connection (host, port, password, user, dbName, tableName ...)
