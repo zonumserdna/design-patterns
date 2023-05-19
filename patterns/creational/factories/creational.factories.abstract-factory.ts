@@ -37,7 +37,8 @@ class Coffee implements HotDrink
 
 abstract class HotDrinkFactory
 {
-  abstract prepare(amount: number): void /* abstract */
+  abstract prepare(amount: number): HotDrink /* abstract */
+  // boilWater can be a common method shared by all subClasses
 }
 
 class CoffeeFactory extends HotDrinkFactory
