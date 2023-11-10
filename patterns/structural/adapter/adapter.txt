@@ -1,0 +1,11 @@
+Adapter
+    Tries to adapt the given interface to the interface needed
+    Like electrical devices which have different interfaces
+    A construct which adapts an existing interface X to conform to the required interface Y.
+
+Summary:
+    Is easy to implement
+        - Determine the API you have and the API you need to acquire
+        - Create the component which aggregates (has a reference to...) the adaptee, it is something which takes the adaptee but does something on it, warps the interface somehow
+        - In some cases you will end up with these intermediate representations, specially temporary data that represents something (representations can pile up): use caching and other optimizations to ensure
+          you don't have any weird behavior like run out of memory

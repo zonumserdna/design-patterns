@@ -1,0 +1,27 @@
+Bridge design pattern
+    Designed for connecting different components together through abstractions
+    - Prevents a particular situation called CARTESIAN PRODUCT COMPLEXITY EXPLOSION.
+        Example: 
+        - Let's suppose you have some sort of base class ThreadScheduler that has something to do
+          with scheduling tasks on the backend or whatever
+        - Let's imagine there are different types of thread schedules. You can have a preemptive scheduler
+          or cooperative thread scheduler
+        - Also imagine that you have a schedule that can run on Windows or Unix
+        - End up with a 2x2 scenario:
+            WindowsPTS, UnixPTS, WindowsCTS, UnixCTS
+        This situation is not something you want to end up with because as you can imagine, this situation doesn't
+        really scale if you have a 2x2 maybe that is manageable but if you have like a 5 Operative systems and 10 
+        different ways of sharing threads then you end up with 50 different classes, and that is not something that
+        anybody does in the real world. This is exactly where the Bridge design pattern comes in.
+    - Bridge pattern avoids the entity explosion in the number of entities that you have to have in your domain
+      model.
+
+Bridge
+    Is a mechanism that decouples an interface or interface hierarchy from an implementation or implementation
+    hierarchy, in other words, is just good old fashioned use of references. So you have one component that
+    references another component and both the component doing the referencing and the component being referenced
+    can exist as part of a hierarchy meaning that you can reference a base class and then you have the right
+    classes which hierarchy substituted in. But also the thing that's doing the referencing can have inheritors,
+    which of course would be calling super in their constructors to make sure that the right things are
+    initialized, and that way you have this dependency between two hierarchies without seeing explosion, without
+    seeing this end by end kind of explosion in the number of classes.

@@ -1,0 +1,21 @@
+This pattern is made to treat individual objects as well as aggregate objects in a uniform fashion.
+
+Motivation
+    - Objects use other objects' fields/methods trough inheritance and composition
+    - Composition lets us make compound objects. We make objects that are collections of things
+        E.g.:
+        - a mathematical expression composed of simple expressions
+        - A shape group made of several different shapes: drag, resize a shape or group of shapes
+          (resize each member)
+    - Composite design pattern is used to treat both single (scalar) and composite objects uniformly meaning
+      they have the same interface
+      - I.e., class foo and an array (containing Foos) having the same API
+
+Composite design pattern
+    Is a mechanism for treating individual (scalar) objects and compositions of objects in a uniform manner.
+    Meaning both provide same interface
+
+Summary
+  - Some composed and singular objects need similar/identical behavior
+  - Composite design pattern lets us treat both types of objects uniformly
+  - A single object can make itself iterable by yielding this
