@@ -1,0 +1,20 @@
+Interpreter
+    - Interpreters are all around us, even now
+    - Textual input needs to be processed
+        E.g., turned into OOP structures
+    - Some examples
+        - Programming language compilers, interpreters IDEs
+        - HTML, XML and similar
+        - Numeric expressions (3+4/5)
+        - Regular expressions
+    - Turning strings into OOP based structures is a complicated process
+
+    A component that processes structured text data. Does so by turning it into a
+    separate lexical tokens (lexing) and then interpreting sequences of said
+    tokens (parsing).
+
+    Summary:
+        - Barring simple cases, an interpreter acts in two stages (lexing, parsing)
+        - Lexing turns text into a set of tokens
+        - Parsing takes the tokens into a meaningful constructs
+        - Parsed data can then be traversed
