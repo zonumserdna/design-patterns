@@ -1,0 +1,16 @@
+Motivation
+    - Augment an object with additional functionality
+    - Do not want to rewrite or alter existing code (OCP)
+    - Want to keep new functionality separate (SRP)
+    - Need to be able to interact with existing structures
+    - 2 options
+        - Inherit from required object (if possible)
+        - Build a decorator, which simply references the decorated object(s)
+
+Decorator
+    Facilitates the addition of behaviors to individual objects without inheriting from them.
+
+Summary
+    - A decorator keeps the reference to the connected objet(s)
+    - Adds utility fields and methods to augment the object's features
+    - May or may not forward calls to the underlying object

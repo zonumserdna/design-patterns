@@ -1,0 +1,18 @@
+Facade
+    Exposing several components through a single interface.
+    Provides a simple, easy to understand user interface over a large and sophisticated body of code.
+
+Motivation
+    - We typically want to balance complexity and presentation/usability
+    - Typical home
+        - Many subsystems (electrical, sanitation)
+        - Complex internal structure (floor, layers)
+        - End user is not exposed to internals
+    - Same with software
+        - Many systems working to provide flexibility
+        - API consumers want it "just to work"
+
+Summary
+    - Build a Facade to provide simplified API over a set of classes
+    - May wish to (optionally) expose internals through the Facade
+    - May allow users to "escalate" to use more complex APIs if they need to.
