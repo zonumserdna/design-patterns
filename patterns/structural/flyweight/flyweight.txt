@@ -1,0 +1,19 @@
+Flyweight
+    A space optimization technic that lets us use less memory by storing
+    externally the data associated with similar objects.
+
+Motivation
+    - Avoid redundancy when storing data
+    - E.g., Massive multiplayer (MMORPG)
+        - Plenty of users with identical first/last names
+        - No sense in storing same first/last names over and over again
+        - Better option is to store a list of names and reference to them
+    - E.g., bold or italic text formatting in text editor
+        - Don't want each character to have a formatting character
+        - Operate on ranges (e.g., line number, start/end positions)
+
+Summary
+    - Store common data externally
+    - Specify an index or a reference into the external data store
+    - Define the idea of "ranges" on homogeneous collections and store data
+      related to those ranges
