@@ -1,0 +1,20 @@
+Mediator
+    - Facilitates communication between components.
+    - Is a component that facilitates communication between other components without them necessarily being
+      aware of each other having direct (reference) access to each other
+    - it is a kind of half connected scenario
+
+Motivation
+    - System with many components
+    - Components may go in and out of a system at any time
+        - Chat room with participants (participants come and go)
+        - Players in a game
+    - It makes no sense for them to have direct references to one another
+        - Those references may go dead at any time
+    - Solution: have them all refer to some central component that facilitates communication
+
+Summary
+    - Create the mediator and have each object in the system refer to it
+    - Mediator engages in bidirectional communication with its connected components
+    - Mediator has functions the components can call
+    - Components have functions the mediator can call
