@@ -1,0 +1,22 @@
+Iterator
+    How traversal of data structures happens and who makes it happen
+    Is an object that facilitates traversal of a particular data structure
+
+Motivation
+    - Iteration (traversal) is a core functionality of various data structures
+    - An iterator is a class that facilitates the traversal
+        - Keeps a reference to the current element
+        - knows how to move to a different element
+        - knows when it is done  and there are no elements to move to
+    - JS supports this through:
+        - Symbol.iterator member that returns
+        - An iterator object with a function called next() that
+        - Returns an object containing:
+            - The value being iterated
+            - the done flag indicating whether iteration is finished
+        - An iterator object can also be made iterable (it is not iterable by itself)
+
+Summary
+    - An iterator specified how you can traverse an object
+    - Stateful iterators cannot be recursive
+    - yield allows for much more succinct iteration
